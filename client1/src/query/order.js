@@ -1,5 +1,10 @@
 import { gql } from "@apollo/client";
 
+// Query to get orders from the server
+// accepts variables for dynamic states and to set dynamic Argument with useState
+// orders Query accepts a search arg and returns different fields depending on the allowed field
+// This Query is able to dynamically decide which field is allowed by using the INCLUDE DIRECTIVE
+// The INCLUDE DIRECTIVE depends on the state of the variables to return a field from the server
 export const GET_ORDERS = gql`
 	query getOrders(
 		$name: Boolean!

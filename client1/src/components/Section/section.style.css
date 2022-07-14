@@ -1,0 +1,54 @@
+.lists {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+
+	gap: 1em;
+	margin-bottom: 3em;
+}
+
+.card {
+	width: 200px;
+	overflow: hidden;
+}
+
+.image {
+	height: 200px;
+	width: 100%;
+	overflow: hidden;
+}
+
+.image img {
+	width: 100%;
+	height: 100%;
+	display: block;
+	object-fit: cover;
+}
+
+.card-content {
+	padding: 1em;
+	border: 1px solid #999;
+}
+
+span {
+	font-weight: 700;
+}
+
+.count {
+	margin: 20px 0;
+}
+
+.count p {
+	font-style: italic;
+}
+
+.section-head {
+	background-color: var(--yellow);
+	height: 60px;
+	margin-bottom: 30px;
+	padding: 1em;
+}
+
+.card-content p {
+	margin-bottom: 0.6em;
+}

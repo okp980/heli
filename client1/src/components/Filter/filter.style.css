@@ -1,0 +1,35 @@
+.filter {
+	margin: 3em 0;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	gap: 1em;
+	justify-content: center;
+}
+.filter-text {
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.btn-group {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1em;
+	justify-content: center;
+}
+
+button {
+	width: 120px;
+	height: 40px;
+	font-size: 0.8rem;
+	border: none;
+	background-color: var(--yellow);
+	text-transform: capitalize;
+	cursor: pointer;
+	color: var(--gray);
+	transition: opacity 0.5ms ease-in-out;
+}
+
+button:hover {
+	opacity: 0.8;
+}

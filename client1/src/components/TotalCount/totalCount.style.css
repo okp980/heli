@@ -1,0 +1,9 @@
+.total-count {
+	margin: 20px auto;
+	border: 3px solid var(--yellow);
+	width: 200px;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}

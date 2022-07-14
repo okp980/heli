@@ -1,5 +1,7 @@
 const orders = require("../data/order");
 
+// schema for the different data types
+
 const {
 	GraphQLObjectType,
 	GraphQLID,

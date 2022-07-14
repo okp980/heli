@@ -1,0 +1,28 @@
+.search {
+	margin: 20px 0;
+	display: flex;
+	justify-content: center;
+}
+
+form {
+	background-color: var(--yellow);
+	height: 80px;
+	width: 500px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+input {
+	height: 30px;
+	outline: none;
+	border: none;
+	font-size: 1rem;
+	padding: 0 0.3em;
+	width: 350px;
+	margin-right: 10px;
+}
+
+.search form button {
+	background-color: var(--white);
+}

@@ -1,31 +1,42 @@
-import { useCallback, useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import { AppContext } from "../../context/AppContext";
+import "./search.style.css";
+
+// Contains an input which recieves text input for search Query
+
 const Search = () => {
 	const [searchValue, setSearchValue] = useState("");
 	const { setFunc } = useContext(AppContext);
 	const { setSearchFilter } = setFunc;
 
-	// useEffect used to debounce search input
-	useEffect(() => {
-		let timer = setTimeout(() => {
-			setSearchFilter(searchValue);
-		}, 1500);
+	const handleChange = (e) => {
+		setSearchValue(e.target.value);
+	};
 
-		return () => {
-			clearTimeout(timer);
-		};
-	}, [searchValue]);
+	const handleSubmit = (e) => {
+		e.preventDefault();
+		if (searchValue.length === 0) {
+			alert("search cannot be empty");
+			return;
+		}
+		setSearchFilter(searchValue);
+	};
 
-	const handleChange = useCallback(
-		(e) => {
-			setSearchValue(e.target.value);
-		},
-		[searchValue]
-	);
 	return (
-		<div>
-			<form>
-				<input type="text" value={searchValue} onChange={handleChange} />
+		<div className="search">
+			<form onSubmit={handleSubmit}>
+				<div className="form-control">
+					<input
+						type="search"
+						value={searchValue}
+						onChange={handleChange}
+						id="search"
+						name="search"
+						placeholder="Search"
+						onSubmit={(e) => e.preventDefault()}
+					/>
+				</div>
+				<button type="submit">submit</button>
 			</form>
 		</div>
 	);
