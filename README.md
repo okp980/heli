@@ -55,7 +55,7 @@ cd client1
 
 yarn install
 
-yarn dev
+yarn start
 
 ```
 
